@@ -1,6 +1,8 @@
 use axum::response::IntoResponse;
 use std::net::SocketAddr;
 
+mod models;
+
 #[tokio::main]
 
 async fn main() {

@@ -11,7 +11,7 @@ uuid = { version = "1", features = ["v4"] }
 dotenvy = "0.15"
 
 # Base de datos SQLite
-sqlx = { version = "0.9", features = ["runtime-tokio", "postgres", "migrate"] }
+sqlx = { version = "0.9", features = ["runtime-tokio", "sqlite", "migrate"] }
 
 # seguridad (emgriptar contrase;as y crear tokens de sesion)
 argon2 = "0.6"
