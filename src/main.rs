@@ -1,7 +1,11 @@
 use axum::response::IntoResponse;
 use std::net::SocketAddr;
 
+mod auth;
+mod handlers;
 mod models;
+
+use handlers::hash_handler::test_hash_handler;
 
 #[tokio::main]
 
@@ -15,8 +19,9 @@ async fn main() {
             panic!("Failed to bind to {}: {}", addr, e);
         });
 
-    let router =
-        axum::Router::new().route("/", axum::routing::get(root_handler).post(post_handler));
+    let router = axum::Router::new()
+        .route("/", axum::routing::get(root_handler).post(post_handler))
+        .route("/test-password", axum::routing::get(test_hash_handler));
 
     println!("listener on {}", listener.local_addr().unwrap());
     axum::serve(listener, router)

@@ -17,3 +17,4 @@ sqlx = { version = "0.9", features = ["runtime-tokio", "sqlite", "migrate"] }
 argon2 = "0.6"
 jsonwebtoken = "12"
 chrono = "0.4"
+rand = "0.10"

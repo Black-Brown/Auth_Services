@@ -53,6 +53,7 @@ dependencies = [
  "chrono",
  "dotenvy",
  "jsonwebtoken",
+ "rand",
  "serde",
  "sqlx",
  "tokio",
