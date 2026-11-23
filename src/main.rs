@@ -2,6 +2,7 @@ use axum::response::IntoResponse;
 use std::net::SocketAddr;
 
 mod auth;
+mod extrator;
 mod handlers;
 mod models;
 
